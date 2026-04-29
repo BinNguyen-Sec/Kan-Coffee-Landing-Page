@@ -130,3 +130,5 @@ Examples:
 - Next.js 14 project initialized (App Router, TypeScript, Tailwind CSS, ESLint)
 - Project dependencies installed
 - Base folder structure merged with existing repo
+- Installed production dependencies: @supabase/supabase-js, framer-motion, three, zod, resend, @sentry/nextjs
+- Installed dev dependencies: @types/three, @types/node
