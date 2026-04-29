@@ -132,3 +132,17 @@ Examples:
 - Base folder structure merged with existing repo
 - Installed production dependencies: @supabase/supabase-js, framer-motion, three, zod, resend, @sentry/nextjs
 - Installed dev dependencies: @types/three, @types/node
+
+## [0.3.0] — 2026-04-29
+
+### Added
+- Supabase project initialized (Singapore region)
+- Database schema: tables + bookings
+- Indexes, RLS policies, triggers, pg_cron auto-release
+- Seed data: 37 tables (19 bookable, 18 walk-in)
+- Supabase client (public) + admin (service role)
+- TypeScript types: Table, Booking, CreateBookingInput
+- Constants: BUSINESS_CONFIG, BOOKING_CONFIG, BRAND_COLORS
+- Zod validation schema for booking input
+- API Routes: GET /api/tables, GET /api/tables/:id,
+  GET /api/bookings/availability, POST /api/bookings
