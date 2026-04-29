@@ -123,3 +123,10 @@ Examples:
 5. Push tag: `git push origin v1.0.0`
 6. GitHub Action triggers production deploy to Vercel
 7. Update `[Unreleased]` → `[1.0.0] — YYYY-MM-DD` in this file
+
+## [0.2.0] — 2026-04-28
+
+### Added
+- Next.js 14 project initialized (App Router, TypeScript, Tailwind CSS, ESLint)
+- Project dependencies installed
+- Base folder structure merged with existing repo
