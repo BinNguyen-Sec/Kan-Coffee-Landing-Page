@@ -1,6 +1,7 @@
 import Navigation from '@/components/ui/Navigation'
 import Hero from '@/components/sections/Hero'
 import InspiredStory from '@/components/sections/InspiredStory'
+import FloorPlan from '@/components/sections/FloorPlan'
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <InspiredStory />
-      {/* Sprint 3: Floor Plan + Booking */}
+      <FloorPlan />
       {/* Sprint 4: Policy */}
     </main>
   )
