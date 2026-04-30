@@ -146,3 +146,18 @@ Examples:
 - Zod validation schema for booking input
 - API Routes: GET /api/tables, GET /api/tables/:id,
   GET /api/bookings/availability, POST /api/bookings
+
+  ## [0.4.0] — 2026-04-29
+
+### Added
+- Realtime hook: useRealtimeTables — Supabase WebSocket subscription
+- Booking hook: useBooking — form submission state management
+- BookingForm component with client-side validation
+- BookingModal component with success state
+- TableMap component — SVG isometric floor plan (Floor 1 + 2)
+- FloorPlan section — realtime table status + booking integration
+- Table position constants for both floors
+
+### Notes
+- Isometric map currently SVG-based (functional)
+- 3D visual enhancement scheduled post go-live
