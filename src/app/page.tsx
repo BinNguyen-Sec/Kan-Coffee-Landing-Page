@@ -2,6 +2,7 @@ import Navigation from '@/components/ui/Navigation'
 import Hero from '@/components/sections/Hero'
 import InspiredStory from '@/components/sections/InspiredStory'
 import FloorPlan from '@/components/sections/FloorPlan'
+import Policy from '@/components/sections/Policy'
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       <Hero />
       <InspiredStory />
       <FloorPlan />
-      {/* Sprint 4: Policy */}
+      <Policy />
     </main>
   )
 }
