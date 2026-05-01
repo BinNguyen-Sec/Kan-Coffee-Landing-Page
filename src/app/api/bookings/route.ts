@@ -71,8 +71,21 @@ export async function POST(req: NextRequest) {
       throw error
     }
 
-    // TODO Sprint 4: Zalo Bot notification
-    // await notifyZaloGroup(booking)
+    // Zalo Bot notification
+try {
+  const { notifyZaloGroup } = await import('@/lib/zalo/notify')
+  await notifyZaloGroup({
+    table_name: table.name,
+    guest_name: input.guest_name,
+    phone: input.phone,
+    date: input.date,
+    start_time: input.start_time,
+    duration_min: input.duration_min,
+  })
+} catch (err) {
+  // Non-blocking — booking still succeeds even if Zalo fails
+  console.error('[Zalo] Notification failed:', err)
+}
 
     return NextResponse.json(
       {
