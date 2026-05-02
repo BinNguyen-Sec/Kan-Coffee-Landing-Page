@@ -161,3 +161,15 @@ Examples:
 ### Notes
 - Isometric map currently SVG-based (functional)
 - 3D visual enhancement scheduled post go-live
+
+## [0.5.0] — 2026-05-02
+
+### Added
+- Policy section: FAQ, opening hours, address, contact, reservation policy
+- Zalo Bot notification on new booking submission
+- Resend email template: BookingConfirmation
+- Webhook endpoint: POST /api/webhooks/booking-confirmed
+- sendConfirmation helper function
+
+### Notes
+- Supabase webhook (booking-confirmed) pending setup after Vercel deploy
