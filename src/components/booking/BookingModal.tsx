@@ -96,8 +96,8 @@ export default function BookingModal({
                     Booking Submitted!
                   </h3>
                   <p className="text-sm text-kan-dark/60 leading-relaxed">
-                    We've received your reservation request.
-                    You'll receive an email confirmation once the owner approves.
+                    We&apos;ve received your reservation request.
+                    You&apos;ll receive an email confirmation once the owner approves.
                   </p>
                   <button
                     onClick={onClose}

@@ -127,9 +127,9 @@ export default function InspiredStory() {
           className="mt-8 text-center border-t border-kan-light pt-12"
         >
           <p className="font-display text-2xl md:text-3xl font-bold text-kan-dark">
-            "I C —{' '}
-            <span className="text-kan-primary italic">ICan.</span>"
-          </p>
+  &ldquo;I C &mdash;{' '}
+  <span className="text-kan-primary italic">I Can.&rdquo;</span>
+</p>
           <p className="mt-4 text-kan-dark/50 text-sm tracking-widest uppercase">
             Kan Coffee · Est. 2025
           </p>

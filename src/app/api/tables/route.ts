@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
       data,
       meta: { total: data.length },
     })
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { success: false, error: { code: 'INTERNAL_ERROR', message: 'Failed to fetch tables.' } },
       { status: 500 }

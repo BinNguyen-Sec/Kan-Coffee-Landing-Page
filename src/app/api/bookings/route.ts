@@ -95,7 +95,7 @@ try {
       },
       { status: 201 }
     )
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { success: false, error: { code: 'INTERNAL_ERROR', message: 'Failed to create booking.' } },
       { status: 500 }

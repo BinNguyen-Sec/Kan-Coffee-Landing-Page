@@ -41,7 +41,7 @@ export async function GET(req: NextRequest) {
         duration_min: parseInt(duration_min),
       },
     })
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { success: false, error: { code: 'INTERNAL_ERROR', message: 'Failed to check availability.' } },
       { status: 500 }
