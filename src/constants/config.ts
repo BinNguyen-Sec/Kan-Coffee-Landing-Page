@@ -4,8 +4,9 @@ export const BUSINESS_CONFIG = {
   openTime: '07:00',
   closeTime: '23:30',
   lastOrder: '22:30',
-  email: '',    // TBD
-  phone: '',    // TBD
+  email: '',
+  phone: '',
+  ownerEmail: 'taodangbuon1602@gmail.com', // ← thêm dòng này
   floors: [1, 2] as const,
 } as const
 

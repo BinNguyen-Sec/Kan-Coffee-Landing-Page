@@ -26,11 +26,11 @@ export async function POST(req: NextRequest) {
     const input = result.data
 
     // Check table is bookable
-    const { data: table } = await supabaseAdmin
-      .from('tables')
-      .select('name, status, is_bookable')
-      .eq('id', input.table_id)
-      .single()
+   const { data: table } = await supabaseAdmin
+  .from('tables')
+  .select('name, floor, status, is_bookable')
+  .eq('id', input.table_id)
+  .single()
 
     if (!table) {
       return NextResponse.json(
@@ -72,19 +72,21 @@ export async function POST(req: NextRequest) {
     }
 
     // Zalo Bot notification
+// Owner email notification (Zalo OA pending approval)
 try {
-  const { notifyZaloGroup } = await import('@/lib/zalo/notify')
-  await notifyZaloGroup({
+  const { sendOwnerNotificationEmail } = await import('@/lib/resend/sendConfirmation')
+  await sendOwnerNotificationEmail({
     table_name: table.name,
+    floor: table.floor as number,
     guest_name: input.guest_name,
     phone: input.phone,
+    email: input.email,
     date: input.date,
     start_time: input.start_time,
     duration_min: input.duration_min,
   })
 } catch (err) {
-  // Non-blocking — booking still succeeds even if Zalo fails
-  console.error('[Zalo] Notification failed:', err)
+  console.error('[Resend] Owner notification failed:', err)
 }
 
     return NextResponse.json(
