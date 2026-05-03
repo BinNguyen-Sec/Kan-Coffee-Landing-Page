@@ -173,3 +173,16 @@ Examples:
 
 ### Notes
 - Supabase webhook (booking-confirmed) pending setup after Vercel deploy
+
+## [0.6.0] — 2026-05-03
+
+### Added
+- Owner email notification on new booking (replacing Zalo Bot temporarily)
+- HTML email templates for owner notification and guest confirmation
+
+### Changed
+- Email rendering switched from React components to HTML strings (Resend v6 compatibility)
+
+### Notes
+- Zalo OA pending approval — will replace email notification post go-live
+- Guest confirmation email pending Supabase webhook setup (requires Vercel URL)
