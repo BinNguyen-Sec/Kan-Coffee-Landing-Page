@@ -186,3 +186,17 @@ Examples:
 ### Notes
 - Zalo OA pending approval — will replace email notification post go-live
 - Guest confirmation email pending Supabase webhook setup (requires Vercel URL)
+
+## [0.7.0] — 2026-05-04
+
+### Performance
+- Desktop Lighthouse: 49 → 99
+- Mobile Lighthouse: 43 → 82
+- Desktop LCP: 3.8s → 1.0s
+- Desktop TBT: 2,010ms → 0ms
+
+### Changed
+- FloorPlan section lazy loaded with Next.js dynamic import
+- Navigation lazy loaded with ssr: false
+- Supabase Realtime subscription deferred 100ms
+- Added font-display: swap for Inter and Playfair Display
